@@ -55,13 +55,14 @@ const Main = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2">
 
-                    <div className="rounded-lg mt-10 p-10 mix-blend-hard-light shadow-lg">
+                    <div data-aos="slide-right" className="rounded-lg mt-10 p-10 mix-blend-hard-light shadow-lg">
     
-                        <h2 className="mb-4 text-xl">Enter Message Hash from smart contract</h2>
+                        <h2 className="mb-4 text-xl">Enter Message you want to sign </h2>
 
                         <textarea 
                             onChange={handleChange}
                             value={text}
+                            placeholder="Paste the message you want to sign here"
                             className="rounded-lg w-full h-40 bg-[#313336] outline-none p-2 md:p-4 resize-none"/>
 
                         <button 
@@ -72,7 +73,7 @@ const Main = () => {
 
                     </div>
 
-                    <div className="rounded-lg mt-10 p-10 mix-blend-hard-light shadow-lg">
+                    <div data-aos="slide-left" className="rounded-lg mt-10 p-10 mix-blend-hard-light shadow-lg">
     
                         <h2 className="mb-4 text-lg">Output Signature </h2>
 

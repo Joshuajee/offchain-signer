@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { WagmiConfig, createClient } from 'wagmi'
 import { getDefaultProvider } from 'ethers'
 import { ToastContainer } from 'react-toastify';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +12,9 @@ import reportWebVitals from './reportWebVitals';
 const client = createClient({
   autoConnect: true,
   provider: getDefaultProvider(),
-}) 
+})
+
+AOS.init({ duration: 400 });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
